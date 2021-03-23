@@ -1,0 +1,942 @@
+@charset "UTF-8";
+/*Обнуление*/
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  ms-text-size-adjust: 100%;
+  moz-text-size-adjust: 100%;
+  webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+/*-------------------*/
+.header {
+  display: flex;
+  min-height: 100vh;
+}
+.header__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1 1 auto;
+}
+.header__slide {
+  padding-bottom: 100px;
+  background-color: #51E2F2;
+}
+.header__slide_o {
+  background-color: #FAB03A;
+}
+.header__slide_p {
+  background-color: #FE8AAA;
+}
+.header__row {
+  display: flex;
+  margin: 0px -20px;
+}
+@media (max-width: 992px) {
+  .header__row {
+    flex-wrap: wrap;
+  }
+}
+.header__column {
+  padding: 0px 20px;
+}
+.header__column_l {
+  flex: 0 1 15%;
+  white-space: nowrap;
+}
+.header__column_r {
+  flex: 0 1 70%;
+}
+@media (max-width: 992px) {
+  .header__column_r {
+    flex: 0 1 100%;
+  }
+}
+.header__box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 60px;
+}
+.header__content {
+  padding: 50px 0px 0px 42px;
+}
+.header__logo {
+  position: relative;
+  z-index: 5;
+  margin-bottom: 127px;
+}
+@media (max-width: 992px) {
+  .header__logo {
+    margin-bottom: 0;
+  }
+}
+
+.menu__list li {
+  margin-bottom: 19px;
+}
+.menu__list li:nth-child(4) {
+  margin-bottom: 40px;
+}
+.menu__list li:nth-child(13) {
+  margin-bottom: 35px;
+}
+.menu__list li:nth-child(15) {
+  margin-bottom: 50px;
+}
+.menu__list li:last-child {
+  margin-bottom: 30px;
+}
+.menu__link {
+  font-family: "Conv_Geometria";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 14px;
+  letter-spacing: -0.02em;
+  color: #343779;
+}
+
+.search {
+  font-family: "Conv_Geometria-ExtaBlack";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 14px;
+  letter-spacing: -0.02em;
+  color: #343779;
+}
+
+.social {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.social__link {
+  margin-right: 20px;
+  font-size: 25px;
+  border: 1px solid rgba(52, 55, 121, 0.2);
+  border-radius: 50%;
+  padding: 10px;
+  color: #343779;
+}
+.social__link:first-child {
+  padding: 10px 15px;
+}
+@media (max-width: 992px) {
+  .social__link {
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+  }
+}
+
+.slide__name {
+  font-family: "Conv_Geometria";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 40px;
+  color: #FFFFFF;
+  width: 237px;
+  margin-bottom: 49px;
+  text-align: center;
+}
+.slide__name_one {
+  margin-bottom: 89px;
+}
+.slide__name_three {
+  margin-bottom: 20px;
+}
+.slide__img {
+  margin-bottom: 25px;
+}
+@media (max-width: 767px) {
+  .slide__img {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 95px;
+  }
+}
+.slide__img img {
+  max-width: 100%;
+  object-fit: cover;
+}
+.slide__img_one {
+  margin-bottom: 75px;
+}
+.slide__img_three {
+  margin-bottom: 5px;
+}
+@media (max-width: 767px) {
+  .slide__img_three {
+    width: 300px;
+    height: 300px;
+    margin-bottom: 55px;
+  }
+}
+.slide__title {
+  font-family: Geometria;
+  font-style: normal;
+  font-weight: bold;
+  font-size: calc(30px + 70 *(100vw/1950));
+  line-height: 100px;
+  text-align: center;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  margin-bottom: 60px;
+  width: 800px;
+  color: #FFFFFF;
+}
+@media (max-width: 767px) {
+  .slide__title {
+    font-size: calc(30px + (70 + 70 * 0.7) * ((110vw - 320px) / 1950));
+    width: auto;
+  }
+}
+.slide__title_one {
+  width: 900px;
+}
+@media (max-width: 992px) {
+  .slide__title_one {
+    width: auto;
+  }
+}
+.slide__title_three {
+  width: 600px;
+}
+@media (max-width: 992px) {
+  .slide__title_three {
+    width: auto;
+  }
+}
+
+.arrow__next {
+  margin-left: 50px;
+  cursor: pointer;
+}
+
+.arrow__prev {
+  cursor: pointer;
+}
+
+@media (max-width: 992px) {
+  .header-menu {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    overflow: auto;
+    visibility: hidden;
+    background-color: #343779;
+    padding-top: 120px;
+    transition: opacity 0.5s ease 0s;
+  }
+
+  .menu__list {
+    transform: translate(38%, 0);
+  }
+  .menu__list li {
+    margin-bottom: 30px;
+  }
+
+  .menu__link {
+    font-size: 20px;
+    font-weight: 700;
+    color: #fff;
+  }
+
+  .header-menu.act {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.5s ease 0s;
+  }
+
+  .header-burger {
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 45px;
+    width: 30px;
+    height: 20px;
+    cursor: pointer;
+    z-index: 100;
+  }
+  .header-burger span {
+    position: absolute;
+    left: 0;
+    top: 9px;
+    width: 100%;
+    height: 2px;
+    background-color: #000;
+  }
+  .header-burger span:first-child {
+    top: 0;
+    width: 50%;
+  }
+  .header-burger span:last-child {
+    top: auto;
+    bottom: 0;
+    width: 50%;
+    left: 50%;
+  }
+
+  .header-burger.act span {
+    background-color: #fff;
+    transform: scale(0);
+  }
+  .header-burger.act span:first-child {
+    transform: rotate(-45deg);
+    top: 9px;
+    transition: transform 0.4s ease 0s;
+    width: 100%;
+  }
+  .header-burger.act span:last-child {
+    transform: rotate(45deg);
+    top: 9px;
+    transition: transform 0.4s ease 0s;
+    width: 100%;
+    left: 0;
+  }
+}
+.category {
+  background: #343779;
+  padding-top: 80px;
+  padding-bottom: 100px;
+}
+@media (max-width: 700px) {
+  .category {
+    padding-bottom: 50px;
+  }
+}
+.category__container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0px 10px;
+}
+.cotegory__row {
+  display: flex;
+  margin: 0px -10px;
+}
+@media (max-width: 992px) {
+  .cotegory__row {
+    flex-wrap: wrap;
+  }
+}
+
+.item {
+  display: flex;
+  flex: 0 1 50%;
+  padding: 0px 10px;
+}
+@media (max-width: 992px) {
+  .item {
+    flex: 0 1 100%;
+    margin-bottom: 20px;
+  }
+}
+.item__content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border: 2px solid #FFFFFF;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  padding-left: 80px;
+  padding-right: 20px;
+}
+@media (max-width: 500px) {
+  .item__content {
+    padding-left: 30px;
+  }
+}
+.item__icon {
+  margin-bottom: 50px;
+}
+.item__link {
+  font-family: "Conv_Geometria-ExtaBlack";
+  font-style: normal;
+  font-weight: bold;
+  font-size: calc(18px + 22 * (100vw/1950));
+  margin-bottom: 40px;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  color: #F85F40;
+  align-items: center;
+  display: flex;
+  flex: 1 1 auto;
+}
+@media (max-width: 767px) {
+  .item__link {
+    font-size: calc(18px + (22 + 22 * 0.7) * ((110vw - 320px) / 1950));
+  }
+}
+.item__link_r {
+  color: #51E2F2;
+}
+.item__arrow {
+  display: inline-block;
+  margin-left: 40px;
+}
+.item__arrow img {
+  max-width: 100%;
+  object-fit: cover;
+}
+@media (max-width: 992px) {
+  .item__arrow {
+    width: 30px;
+    height: 30px;
+    margin-left: 20px;
+  }
+}
+.item__text {
+  font-family: "Conv_Geometria";
+  font-style: normal;
+  width: 300px;
+  font-weight: 500;
+  font-size: 20px;
+  font-size: calc(15px + 5 * (100vw/1950));
+  line-height: 25px;
+  letter-spacing: -0.02em;
+  color: #FFFFFF;
+}
+@media (max-width: 767px) {
+  .item__text {
+    font-size: calc(15px + (5 + 5 * 0.7) * ((110vw - 320px) / 1950));
+  }
+}
+@media (max-width: 500px) {
+  .item__text {
+    width: auto;
+  }
+}
+
+.blog {
+  background: #343779;
+  padding-bottom: 5px;
+}
+.blog__title {
+  font-family: "Conv_Geometria";
+  font-size: calc(30px + 10 * (100vw/1950));
+  line-height: 40px;
+  color: #FFFFFF;
+  margin-bottom: 66px;
+}
+@media (max-width: 767px) {
+  .blog__title {
+    font-size: calc(30px + (10 + 10 * 0.7) * ((110vw - 320px) / 1950));
+    margin-bottom: 30px;
+  }
+}
+.blog__list {
+  margin-bottom: 53px;
+  display: flex;
+  padding-left: 20px;
+}
+.blog__list li {
+  margin-right: 78px;
+}
+.blog__list li:last-child {
+  margin-right: 0;
+}
+@media (max-width: 700px) {
+  .blog__list {
+    justify-content: center;
+    padding-left: 0px;
+    margin-bottom: 40px;
+  }
+  .blog__list li {
+    border: 1px solid transparent;
+    margin-right: 20px;
+  }
+}
+.blog__link {
+  font-family: "Conv_Geometria";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  font-size: calc(16px + 4 * (100vw/1950));
+  line-height: 30px;
+  color: #FFFFFF;
+  white-space: nowrap;
+  border: 1px solid #FFFFFF;
+  padding: 8px;
+}
+.blog__link:hover {
+  transition: all 0.5s ease 0s;
+  background-color: #fff;
+  color: #343779;
+}
+@media (max-width: 767px) {
+  .blog__link {
+    font-size: calc(16px + (4 + 4 * 0.7) * ((110vw - 320px) / 1950));
+    text-align: center;
+  }
+}
+.blog__row {
+  margin-bottom: 50px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  display: flex;
+  margin-left: -10px;
+  margin-right: -10px;
+  padding-bottom: 6px;
+}
+@media (max-width: 992px) {
+  .blog__row {
+    flex-wrap: wrap;
+  }
+}
+.blog__box {
+  display: flex;
+  flex: 0 1 25%;
+  padding: 0px 10px;
+  width: 100%;
+}
+.blog__box:last-child {
+  padding-left: 5px;
+}
+@media (max-width: 992px) {
+  .blog__box {
+    flex: 0 1 50%;
+  }
+}
+@media (max-width: 700px) {
+  .blog__box {
+    flex: 0 1 100%;
+  }
+}
+.blog__btn {
+  display: block;
+  width: 339px;
+  font-family: "Conv_Geometria";
+  font-weight: 500;
+  font-size: 15px;
+  text-align: center;
+  line-height: 14px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  margin: 0px auto 100px auto;
+  border: 2px solid #FFFFFF;
+  padding: 25px 0;
+}
+@media (max-width: 700px) {
+  .blog__btn {
+    width: 280px;
+    margin-bottom: 70px;
+  }
+}
+
+.box {
+  display: flex;
+}
+.box__content {
+  padding-bottom: 50px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  padding-right: 5px;
+  padding-left: 5px;
+}
+@media (max-width: 992px) {
+  .box__content {
+    align-items: center;
+  }
+}
+.box__link {
+  flex: 1 1 auto;
+}
+.box__image {
+  display: block;
+  margin-bottom: 30px;
+}
+.box__image img {
+  width: 320px;
+  height: 188px;
+  max-width: 100%;
+  object-fit: cover;
+}
+.box__text {
+  display: block;
+  font-family: "Conv_Geometria";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 25px;
+  margin-bottom: 20px;
+  color: #FFFFFF;
+}
+@media (max-width: 992px) {
+  .box__text {
+    width: 300px;
+  }
+}
+.box__data {
+  font-family: "Conv_Geometria";
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 25px;
+  color: #FFFFFF;
+  opacity: 0.5;
+}
+
+.footer {
+  padding-bottom: 200px;
+  background: #343779;
+}
+@media (max-width: 767px) {
+  .footer {
+    padding-bottom: 50px;
+  }
+}
+.footer__container {
+  border-top: 1px solid white;
+}
+.footer__row {
+  padding-top: 65px;
+  display: flex;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+@media (max-width: 1200px) {
+  .footer__row {
+    flex-wrap: wrap;
+  }
+}
+.footer__column {
+  flex: 0 1 16.666%;
+  display: flex;
+  justify-content: center;
+  padding: 0px 5px;
+}
+@media (max-width: 1200px) {
+  .footer__column {
+    flex: 0 1 33.333%;
+    margin-bottom: 50px;
+  }
+}
+@media (max-width: 767px) {
+  .footer__column {
+    flex: 0 1 100%;
+  }
+  .footer__column:nth-child(2) {
+    margin-bottom: 0px;
+  }
+}
+@media (max-width: 767px) {
+  .footer__column_l {
+    justify-content: left;
+    position: relative;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding-top: 20px;
+  }
+}
+.footer__menu {
+  padding: 0px 10px;
+}
+@media (max-width: 1200px) {
+  .column__content {
+    text-align: center;
+  }
+}
+
+.logo {
+  margin-bottom: 32px;
+}
+.logo img {
+  max-width: 100%;
+}
+.logo__text {
+  font-family: "Conv_Geometria";
+  font-size: 15px;
+  line-height: 20px;
+  color: #FFFFFF;
+}
+@media (max-width: 1200px) {
+  .logo__text {
+    width: 200px;
+  }
+}
+@media (max-width: 767px) {
+  .logo__text {
+    width: auto;
+    font-size: 11px;
+  }
+}
+
+.menu-footer__dropdown {
+  margin-bottom: 25px;
+}
+.menu-footer__list li {
+  margin-bottom: 18px;
+}
+.menu-footer__link {
+  font-family: "Conv_Geometria";
+  font-size: 15px;
+  line-height: 14px;
+  color: #FFFFFF;
+}
+.menu-footer__link_bold {
+  font-weight: 700;
+}
+.menu-footer__link_up {
+  text-transform: uppercase;
+}
+
+.bold {
+  font-family: "Conv_Geometria";
+  font-weight: bold;
+  font-size: 15px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  width: auto;
+}
+@media (max-width: 767px) {
+  .bold {
+    font-size: 14px;
+  }
+}
+
+.contact__title {
+  margin-bottom: 20px;
+}
+.contact__tel {
+  font-family: "Conv_Geometria";
+  font-size: 15px;
+  line-height: 14px;
+  color: #FFFFFF;
+  white-space: nowrap;
+}
+@media (max-width: 767px) {
+  .contact__tel {
+    font-size: 11px;
+  }
+}
+
+.mode__title {
+  margin-bottom: 20px;
+}
+.mode__work {
+  font-family: "Conv_Geometria";
+  font-size: 15px;
+  line-height: 20px;
+  color: #FFFFFF;
+  white-space: nowrap;
+}
+@media (max-width: 767px) {
+  .mode__work {
+    font-size: 11px;
+  }
+}
+
+.footer-social {
+  transform: translate(50px, 0);
+  padding-top: 5px;
+}
+@media (max-width: 1200px) {
+  .footer-social {
+    transform: translate(0px, 0);
+  }
+}
+.footer-social__in {
+  margin-right: 20px;
+  font-size: 25px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 50%;
+  padding: 10px;
+  color: #ffffff;
+  padding: 10px 15px;
+}
+.footer-social__vk {
+  font-size: 25px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 50%;
+  padding: 10px;
+  color: #ffffff;
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+}
+@media (max-width: 767px) {
+  .info {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media (max-width: 767px) {
+  .info__col {
+    margin-bottom: 30px;
+  }
+}
+.info__law {
+  font-family: "Conv_Geometria";
+  font-size: 15px;
+  line-height: 14px;
+  color: #FFFFFF;
+}
+.info__contract {
+  font-family: "Conv_Geometria";
+  font-size: 15px;
+  line-height: 20px;
+  color: #FFFFFF;
+  text-decoration: underline;
+}
+.info__creativ {
+  font-family: "Conv_Geometria";
+  font-size: 15px;
+  line-height: 20px;
+  color: #FFFFFF;
+}
+
+@media (max-width: 767px) {
+  body.touch .menu-footer__list {
+    display: none;
+  }
+  body.touch .menu-footer__list.open {
+    display: block;
+  }
+}
+@media (max-width: 767px) {
+  body.touch .arrows {
+    position: absolute;
+    right: 0;
+    top: 20px;
+    border-right: 8px solid transparent;
+    border-left: 8px solid transparent;
+    border-top: 8px solid #fff;
+    border-bottom: none;
+  }
+}
+body.touch .arrows.active {
+  transform: rotate(180deg);
+}
+
+@font-face {
+  font-family: "Conv_Geometria";
+  src: url("../../fonts/Geometria.eot");
+  src: local("☺"), url("../../fonts/Geometria.woff") format("woff"), url("../../fonts/Geometria.ttf") format("truetype"), url("../../fonts/Geometria.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Conv_Geometria-ExtaBlack";
+  src: url("../../fonts/Geometria-ExtaBlack.eot");
+  src: local("☺"), url("../../fonts/Geometria-ExtaBlack.woff") format("woff"), url("../../fonts/Geometria-ExtaBlack.ttf") format("truetype"), url("../../fonts/Geometria-ExtaBlack.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+.wrapper {
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.page {
+  background-color: #343779;
+}
+
+.ibg {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.ibg img {
+  display: none;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0px 10px;
+}
+
+.big {
+  font-family: "Conv_Geometria-ExtaBlack";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 14px;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  color: #343779;
+}
+@media (max-width: 992px) {
+  .big {
+    color: #fff;
+  }
+}
